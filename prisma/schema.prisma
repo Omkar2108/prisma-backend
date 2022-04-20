@@ -1,0 +1,14 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgres://muvvoszjkxlona:2fbc59eac3c4346f8d105dbf353087fa4ec5b86ff8cc1ad10844de683a72f5e8@ec2-52-73-155-171.compute-1.amazonaws.com:5432/dc1v80bk51pelh"
+}
+
+model User {
+  id    Int     @id @default(autoincrement())
+  username String  @unique
+  password  String
+}
